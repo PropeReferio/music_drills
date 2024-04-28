@@ -26,6 +26,8 @@ def all_drills(request):
 
 
 def random_drills_by_int(request):
+    # TODO combine this view with the one below
+    # TODO add CSS
     num_drills = request.GET.get("num_drills")
     result = []
     drills = Drill.objects.order_by("category")

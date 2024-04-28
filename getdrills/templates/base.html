@@ -1,0 +1,11 @@
+{% load static %}
+<html lang="en">
+<head>
+    <title>{% block title %}{% endblock %}</title>
+    <link href="{{ STATIC_URL }}getdrills/main.css" rel="stylesheet" type="text/css" media="screen" />
+</head>
+<body>
+{#    <img src="{% static 'images/sitelogo.png' %}" alt="Logo">#}
+    {% block content %}{% endblock %}
+</body>
+</html>

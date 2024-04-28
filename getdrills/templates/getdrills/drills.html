@@ -1,3 +1,8 @@
+{% extends "base.html" %}
+
+{% block title %}Drills{% endblock %}
+
+{% block content %}
 {% if drills %}
     <table>
     <tr>
@@ -16,3 +21,4 @@
 {% else %}
     <p>No drills are available.</p>
 {% endif %}
+{% endblock %}
