@@ -6,7 +6,7 @@ from .models import Category, Drill
 import random
 
 
-def index(request):
+def choose_drills(request):
     categories = Category.objects.order_by("cat_name")
     template = loader.get_template("getdrills/choose_parameters.html")
 

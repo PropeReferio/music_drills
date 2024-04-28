@@ -2,10 +2,19 @@
 <html lang="en">
 <head>
     <title>{% block title %}{% endblock %}</title>
-    <link href="{{ STATIC_URL }}getdrills/main.css" rel="stylesheet" type="text/css" media="screen" />
+    {% load static %}
+    <link href="{% static 'getdrills/main.css' %}" rel="stylesheet" type="text/css" media="screen" />
 </head>
 <body>
 {#    <img src="{% static 'images/sitelogo.png' %}" alt="Logo">#}
+    <nav>
+        <ul>
+            <li>
+                <a href="{% url 'getdrills:all_drills' %}">All Drills</a>
+                <a href="{% url 'getdrills:choose_drills' %}">Choose Drills</a>
+            </li>
+        </ul>
+    </nav>
     {% block content %}{% endblock %}
 </body>
 </html>

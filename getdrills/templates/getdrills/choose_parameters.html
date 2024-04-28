@@ -1,3 +1,8 @@
+{% extends "base.html" %}
+
+{% block title %}Drills{% endblock %}
+
+{% block content %}
 <form action="{% url 'getdrills:random_drills_by_int' %}" method="get">
 <h4>Choose how many drills you want.</h4>
     <fieldset>
@@ -20,3 +25,4 @@
     </fieldset>
     <input type="submit" value="Get Drills">
 </form>
+{% endblock %}
