@@ -1,0 +1,22 @@
+<form action="{% url 'getdrills:random_drills_by_int' %}" method="get">
+<h4>Choose how many drills you want.</h4>
+    <fieldset>
+        <label for="num_drills">Number of drills</label>
+        <input type="number" name="num_drills" id="num_drills" required>
+    </fieldset>
+    <input type="submit" value="Get Drills">
+</form>
+
+<form action="{% url 'getdrills:random_drills_by_int_and_category' %}" method="get">
+    <h4>Choose number of drills by category.</h4>
+    <fieldset>
+    {% for category in categories %}
+        <label for="category{{ forloop.counter }}">
+            {{ category.cat_name }}
+        </label>
+        <input type="number" name={{ category.id }} id="category{{ forloop.counter }}">
+{#        TODO add max attr with number of drills per category. #}
+    {% endfor %}
+    </fieldset>
+    <input type="submit" value="Get Drills">
+</form>

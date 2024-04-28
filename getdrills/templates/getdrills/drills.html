@@ -1,0 +1,18 @@
+{% if drills %}
+    <table>
+    <tr>
+        <th>Title</th>
+        <th>Description</th>
+        <th>Category</th>
+    </tr>
+    {% for drill in drills %}
+        <tr>
+            <td>{{ drill.title }}</td>
+            <td>{{ drill.description }}</td>
+            <td>{{ drill.category.cat_name }}</td>
+        </tr>
+    {% endfor %}
+    </table>
+{% else %}
+    <p>No drills are available.</p>
+{% endif %}
