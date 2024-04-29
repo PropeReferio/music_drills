@@ -8,6 +8,8 @@ class Category(models.Model):
         return self.cat_name
 
     # TODO add harp drills
+    # TODO add users/auth for drills by person
+
 
 class Drill(models.Model):
     title = models.CharField(max_length=200)
@@ -16,5 +18,3 @@ class Drill(models.Model):
 
     def __str__(self):
         return f"{self.title}: {self.description[:22]}..."
-
-
