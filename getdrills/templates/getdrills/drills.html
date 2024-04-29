@@ -4,11 +4,11 @@
 
 {% block content %}
 {% if drills %}
-    <table>
+    <table class="table" id="drill_table">
     <tr>
-        <th>Title</th>
-        <th>Description</th>
-        <th>Category</th>
+        <th scope="col">Title</th>
+        <th scope="col">Description</th>
+        <th scope="col">Category</th>
     </tr>
     {% for drill in drills %}
         <tr>

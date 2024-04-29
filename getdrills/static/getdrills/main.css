@@ -1,3 +1,16 @@
 body {
-    background-color: #b15d5d;
+    background-color: #154961;
+}
+#drill_table td {
+    background-color: #5776a2;
+}
+.bo-form {
+    margin: 1em;
+    padding: 1em;
+}
+.bo-form > input {
+    margin: 1em 0;
+}
+.bo-form fieldset input[type="number"] {
+    max-width: 5em;
 }
